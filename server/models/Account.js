@@ -19,6 +19,12 @@ const accountSchema = new Schema({
         required: true,
         minlength: 6,
     },
+    poems: [
+        {
+            type: String,
+            trim: true,
+        },
+    ],
 });
 
 const Account = model('Account', accountSchema);
