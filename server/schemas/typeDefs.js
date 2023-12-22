@@ -5,6 +5,11 @@ const typeDefs = `
         poems: [Srting]!
     }
 
+    type Query {
+        accounts: [Account]!
+        account(accountId: ID!): Account
+    }
+
     type Mutation {
         addAccount(name: String!): Account
         addPoem(accountId: ID!, poem: String!): Account
